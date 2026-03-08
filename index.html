@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>I'm Sorry</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+    background-color: #ffd6e7;
+    padding-top: 80px;
+}
+
+h1{
+    color: #ff4d6d;
+}
+
+#message{
+    font-size: 20px;
+    margin: 20px;
+}
+
+img{
+    width: 200px;
+    margin: 15px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #e63956;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Baby:(((</h1>
+
+<p id="message">Click next...</p>
+
+<img id="sticker" src="https://media.tenor.com/JQylNRYWG9QAAAAj/sad.gif">
+
+<br><br>
+
+<button onclick="nextMessage()">Next</button>
+
+<br><br>
+
+<button id="exitBtn" onclick="exitPage()" style="display:none;">Exit</button>
+
+<script>
+
+let clickCount = 0;
+
+function nextMessage(){
+
+clickCount++;
+
+if(clickCount == 1){
+document.getElementById("message").innerHTML =
+"please baby i'm sorry na:((";
+
+document.getElementById("sticker").src =
+"https://media.giphy.com/media/ROF8OQvDmxytW/giphy.gif";
+}
+
+else if(clickCount == 2){
+document.getElementById("message").innerHTML =
+"I didn't mean to hurt you, honey:((";
+
+document.getElementById("sticker").src =
+"https://c.tenor.com/TWVV9kEpxroAAAAM/sad-cute.gif";
+}
+
+else if(clickCount == 3){
+document.getElementById("message").innerHTML =
+"Na dala lang gayud ako sa ako sapot. I know that's not a good reason para ing-ato ako mag storya, i'm sorry:((. <br><br>I'm sorry na abot nasab pila ka days ato away. Na sipog da ako tas disappointed kay nahimo ko nasab balik.<br><br>I'm sorry napa-feel ko na okay da sa ako or way ako pake if mag-away kita.<br><br> i'm sorry kay ikaw da nag sige hamok ge pan laong na drain da gayud ako na sipog tas na ano sako self kay an di dapat nako otrohon na otro nasab, pero hon ge try ko gayud <br><br> ako best na di ma otro gusto ko di na ma otro gipan hinang ko pero ma otro ko gihapon ma dala ako sa init nan ulo or sapot ko naman sorry na honey pleaseee:((";
+
+document.getElementById("sticker").src =
+"https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif";
+}
+
+else if(clickCount == 4){
+document.getElementById("message").innerHTML =
+"I hope we can be okay na:(";
+
+document.getElementById("sticker").src =
+"https://media.tenor.com/xE7vQ8oM_-MAAAAC/cartoon-sad.gif";
+
+document.getElementById("exitBtn").style.display = "inline";
+}
+
+}
+
+function exitPage(){
+document.body.innerHTML = "<h1>Thank you for reading 💖</h1>";
+}
+
+</script>
+
+</body>
+</html>
